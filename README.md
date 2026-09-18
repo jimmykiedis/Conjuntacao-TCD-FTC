@@ -1,96 +1,123 @@
-==============================
-       Conjuntão C™
-==============================
+# 🧮 Conjuntão C™
 
-📄 Descrição:
--------------
-Projeto acadêmico da disciplina **Fundamentos de Tecnologia da Computação (FTC)** – UFGD 🎓
+<p align="center">
+  <em>Academic project for the Fundamentals of Computer Technology (FTC) course — UFGD 🎓</em>
+</p>
 
-Este programa em **linguagem C** realiza operações com conjuntos e análise de propriedades relacionais.
-
-Você pode escolher entre:
-
-1️⃣ Conjuntacao (operações clássicas de conjuntos):
-   - União
-   - Interseção
-   - Diferença (A - B)
-
-2️⃣ Propriedades Relacionais (verificação de relações):
-   - Reflexiva
-   - Simétrica
-   - Transitiva
-
-Tudo via terminal e com interação amigável ao usuário 🖥️✨.
+<p align="center">
+  <img src="https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white" alt="C">
+  <img src="https://img.shields.io/badge/GCC-compiler-A42E2B?style=flat&logo=gnu&logoColor=white" alt="GCC">
+  <img src="https://img.shields.io/badge/status-completed-brightgreen" alt="Status: completed">
+  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey" alt="Platforms: Windows and Linux">
+  <img src="https://img.shields.io/badge/license-MIT-blue" alt="MIT License">
+</p>
 
 ---
 
-📦 Estrutura de arquivos:
--------------------------
-- `FTC.c`          → Código-fonte principal
-- `FTC.o`          → Arquivo objeto (gerado na compilação)
-- `output/`        → Pasta de saída com o executável (`FTC.exe`)
-- `README.txt`     → Este arquivo com todas as informações
+**Conjuntão C™** is a terminal program written in C to perform set operations and check properties of mathematical relations. It was created as an academic exercise for the Fundamentals of Computer Technology (FTC) course at UFGD.
 
----
+The program presents an interactive menu with two main areas: classic operations between sets and analysis of relational properties.
 
-🔧 Como compilar:
------------------
-Usando GCC (Terminal ou VS Code):
+## 🎯 Repository Objective
 
-✔️ Para gerar só o `.o`:
+Bring together a didactic implementation of the fundamental concepts of programming logic in C, applying arrays, loop structures, functions, flow control, and mathematical reasoning about sets and relations.
+
+## ✨ Topics Covered
+
+- Union, intersection, and difference operations between sets.
+- Verification of the reflexive, symmetric, and transitive properties of relations.
+- Use of arrays, `for` and `while` loops, `switch` structures, and functions.
+- Basic input and buffer control with `getchar()`.
+- Use of `stdbool.h` for logical tests.
+- Terminal clearing adapted for Windows and Linux.
+
+## 🛠 How to Download the Repository
+
+📥 1. Clone the repository with Git:
+
+```bash
+git clone Conjuntacao-TCD-FTC.git
+cd conjuntao-c
+```
+
+If you don't use Git, download the project as a ZIP file from the repository page and extract it into a local folder.
+
+🔗 2. Compile
+
+You need to have the GCC compiler installed.
+
+To generate the object file:
+
+```bash
 gcc -Wall -Wextra -c FTC.c -o FTC.o
+```
 
+To generate the executable from the object file:
 
-✔️ Para gerar o `.exe`:
+```bash
 gcc FTC.o -o output/FTC.exe
+```
 
+Or compile directly with a single command:
 
-✔️ Ou tudo de uma vez:
+```bash
 gcc -Wall -Wextra FTC.c -o output/FTC.exe
+```
 
+▶️ 3. Run
 
----
+On Windows:
 
-🚀 Como executar:
------------------
-Se estiver no Windows:
+```bash
 ./output/FTC.exe
+```
 
-Ou, simplesmente, dê dois cliques no `.exe`.
+On Linux, generate an executable without the `.exe` extension and run it with:
 
-Se estiver no Linux:
+```bash
 ./output/FTC
+```
 
-*(Adapte o caminho caso precise)*
+Follow the options shown in the menu to enter the sets or relations you want to analyze.
+
+## 🏗️ Implementation Strategy
+
+The program represents sets and relations using arrays with a maximum capacity defined by the `MAX` constant. Set operations iterate through the elements to identify results and avoid duplicates. Relational properties, in turn, are verified by comparing the given pairs, following the mathematical definitions of reflexivity, symmetry, and transitivity.
+
+## 🛠️ Technologies
+
+| Technology | Use in the project |
+| --- | --- |
+| C (C99 or higher) | Main language of the program |
+| GCC | Compilation of the source code |
+| `stdbool.h` | Boolean values in the property tests |
+| C standard libraries | Input, output, and other program resources |
+
+No external library is required.
+
+## 📁 Project Structure
+
+```text
+conjuntao-c/
+├── FTC.c          # Main source code
+├── FTC.o          # Object file generated during compilation
+├── output/        # Generated executable
+└── README.md      # Project documentation
+```
+
+## 📝 Final Notes
+
+- The limit of elements per set is **20**, defined by `#define MAX 20`.
+- Set operations avoid duplicate elements in the result.
+- Input handling was designed for didactic purposes and does not have robust validation; follow the instructions shown in the terminal.
+- The project is complete and serves as study material and an initial reference for programming in C.
+
+## 📄 License
+
+This is an academic project developed for study purposes in the Fundamentals of Computer Technology (FTC) course — UFGD, in 2025.
+
+The content may be consulted, studied, and adapted for educational purposes. To formally adopt the MIT license indicated in the badge, include a `LICENSE` file with the full text of the license.
 
 ---
 
-🧠 Conceitos trabalhados:
--------------------------
-- Vetores (Arrays)
-- Laços de repetição (`for`, `while`)
-- Controle de fluxo com `switch`
-- Funções com passagem de parâmetros
-- Manipulação de entrada (controle de buffer com `getchar()`)
-- Uso de booleanos (`stdbool.h`)
-- Limpeza de tela com macros adaptadas pra Windows/Linux
-- Testes de propriedades matemáticas em relações (Reflexiva, Simétrica, Transitiva)
-
----
-
-⚠️ Observações:
----------------
-- O limite de elementos por conjunto é **20** (definido por `#define MAX 20`).
-- O código evita duplicatas nas operações de conjuntos.
-- Entrada de dados não tem validação robusta: **siga as instruções na tela!**
-- Estrutura pensada pra ser didática, mas algumas gambiarras foram inevitáveis 😅.
-
----
-
-👨‍💻 Autor:
-----------
-Farias, Leonardo.
-
----
-
-🎯 Projeto acadêmico - UFGD - 2025
+<p align="center">🎯 Academic project — UFGD — 2025</p>
