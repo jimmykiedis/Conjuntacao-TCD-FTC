@@ -36,7 +36,7 @@ Bring together a didactic implementation of the fundamental concepts of programm
 📥 1. Clone the repository with Git:
 
 ```bash
-git clone Conjuntacao-TCD-FTC.git
+git clone https://github.com/jimmykiedis/Conjuntacao-TCD-FTC.git
 cd conjuntao-c
 ```
 
