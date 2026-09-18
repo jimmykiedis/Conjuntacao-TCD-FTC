@@ -42,7 +42,29 @@ cd conjuntao-c
 
 If you don't use Git, download the project as a ZIP file from the repository page and extract it into a local folder.
 
-🔗 2. Compile
+🧰 2. Install GCC
+
+On Windows, download and install [MSYS2](https://www.msys2.org/). Open the **MSYS2 UCRT64** terminal and run:
+
+```bash
+pacman -Syu
+pacman -S --needed mingw-w64-ucrt-x86_64-gcc
+```
+
+On Debian or Ubuntu Linux, install GCC with:
+
+```bash
+sudo apt update
+sudo apt install build-essential
+```
+
+After installation, verify that GCC is available:
+
+```bash
+gcc --version
+```
+
+🔗 3. Compile
 
 You need to have the GCC compiler installed.
 
@@ -64,7 +86,7 @@ Or compile directly with a single command:
 gcc -Wall -Wextra FTC.c -o output/FTC.exe
 ```
 
-▶️ 3. Run
+▶️ 4. Run
 
 On Windows:
 
